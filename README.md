@@ -1,5 +1,12 @@
 # Spatio-Temporal Voxel Layer 
 
+
+## Installation
+
+- Install [openvdb](https://github.com/SynapseProgramming/OpenVDB-install)
+- Git clone this package into your src folder and run `colcon build`
+
+## Description
 This is a drop in replacement for the voxel_grid voxel representation of the environment. This package does a number of things to improve on the voxel grid package and extend the capabilities offered to the users, under a LGPL v2.1 license. Developed and maintained by [Steven Macenski](https://www.linkedin.com/in/steven-macenski-41a985101/) at [Simbe Robotics](http://www.simberobotics.com/).
 
 This package sits on top of [OpenVDB](http://www.openvdb.org/), an open-source C++ library built by Dreamworks "comprising a novel hierarchical data structure and a suite of tools for the efficient storage and manipulation of sparse volumetric data discretized on three-dimensional grids. It is developed and maintained by DreamWorks Animation for use in volumetric applications typically encountered in feature film production."
@@ -82,18 +89,6 @@ As the images above suggest, you can use this to map an environment in 3D in rea
 You can run multiple instances of the layer one to map and other to navigate if you want to navigate while mapping the environment. Mapping will also save incremental maps in the launch directory. Maps may be visualized using `vdb_viewer`. The costmap and occupancy point clouds will not generate in this mode from this layer. Utility functions are provided so you don't need to learn anything about vdb files to convert to a pcl pointcloud in `vdb2pc.hpp`. 
 
 If you would like to be involved in this work, I would gladly take contributors and coauthors.
-
-## Installation
-
-As of July 8 it is available via `apt-get`:
-```
-sudo apt-get install ros-kinetic-spatio-temporal-voxel-layer
-```
-
-### Install from source
-Required dependencies ROS Kinetic, navigation, OpenVDB, TBB.
-
-`sudo rosdep init && rosdep update && rosdep install --from-paths src --ignore-src -r -y`
 
 ## Configuration and Running
 
